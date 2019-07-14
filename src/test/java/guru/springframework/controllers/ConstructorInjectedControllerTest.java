@@ -1,5 +1,6 @@
 package guru.springframework.controllers;
 
+import guru.springframework.services.ConstructorGreetingService;
 import guru.springframework.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +15,7 @@ public class ConstructorInjectedControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        this.constructorInjectedController = new ConstructorInjectedController(new GreetingServiceImpl());
+        this.constructorInjectedController = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test
